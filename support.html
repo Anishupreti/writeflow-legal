@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>WriteFlow AI — Support</title>
+<style>
+  :root {
+    --ink: #16181A; --bg: #FAFAF8; --surface: #FFFFFF; --muted: #5B6169;
+    --accent: #B5622C; --accent-2: #D97F45; --accent-ink: #FFFFFF;
+    --border: rgba(0,0,0,0.08); --hover: rgba(0,0,0,0.045);
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.07); --shadow: 0 8px 20px rgba(0,0,0,.14);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #F2F1ED; --bg: #17181A; --surface: #212224; --muted: #9AA0A6;
+      --accent: #E0925C; --accent-2: #EDAB7C; --accent-ink: #201200;
+      --border: rgba(255,255,255,0.09); --hover: rgba(255,255,255,0.055);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    max-width: 720px; margin: 0 auto; padding: 56px 24px 80px;
+    padding-top: calc(56px + env(safe-area-inset-top, 0px));
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    color: var(--ink); background: var(--bg);
+  }
+  header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .mark { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(150deg, var(--accent), var(--accent-2));
+    display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); flex-shrink: 0; }
+  h1 { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+  p.lede { color: var(--muted); font-size: 15px; line-height: 1.6; margin: 18px 0 36px; max-width: 560px; }
+
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px 26px; margin-bottom: 18px; }
+  .card h2 { font-size: 16px; font-weight: 750; margin-bottom: 12px; display: flex; align-items: center; gap: 9px; }
+  .card h2 svg { color: var(--accent); flex-shrink: 0; }
+  .card p, .card li { font-size: 14px; line-height: 1.65; color: var(--ink); }
+  .card ul { margin: 0; padding-left: 20px; }
+  .card li { margin-bottom: 10px; }
+  .card li:last-child { margin-bottom: 0; }
+  .card li b { font-weight: 700; }
+
+  .contact-card { background: linear-gradient(180deg, rgba(181,98,44,0.06) 0%, var(--surface) 60%); border: 1px solid var(--border); }
+  .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--accent-ink);
+    font-weight: 700; font-size: 14px; padding: 11px 20px; border-radius: 999px; text-decoration: none;
+    box-shadow: var(--shadow-sm); margin-top: 8px; }
+
+  a.text-link { color: var(--accent); font-weight: 650; text-decoration: none; }
+  a.text-link:hover { text-decoration: underline; }
+
+  footer { margin-top: 40px; font-size: 12.5px; color: var(--muted); text-align: center; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+  <header>
+    <div class="mark">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+    </div>
+    <h1>WriteFlow AI — Support</h1>
+  </header>
+  <p class="lede">WriteFlow adds an AI writing assistant to text fields across the web. It has no server, no account system, and no login — everything below should get you unstuck without needing to wait on a reply, but reach out any time if it doesn't.</p>
+
+  <div class="card">
+    <h2><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.2-6.3-4.5-6.3 4.5 2.3-7.2-6-4.4h7.6z"/></svg>Getting started</h2>
+    <ul>
+      <li><b>No API key needed to try it.</b> Settings → Provider is set to <b>Mock</b> by default — click into any text field and try the full interaction with zero setup.</li>
+      <li><b>Real generation</b> needs your own API key from OpenAI, Anthropic, or Google Gemini, pasted into Settings. WriteFlow never sees or stores this anywhere but your own browser.</li>
+      <li><b>Pro features</b> (every writing style, custom instructions, context-tailored replies) unlock with a one-time license key from Gumroad — no subscription.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>Troubleshooting</h2>
+    <ul>
+      <li><b>The trigger doesn't appear on a site.</b> Check Settings → Disabled Sites — that site may have been turned off from the popup's "Disable on this site" button.</li>
+      <li><b>Generation fails or shows an error.</b> Confirm the selected Provider matches the API key you entered (an OpenAI key won't work with Anthropic selected, etc.), and that the key hasn't expired or run out of credit with that provider.</li>
+      <li><b>Pro isn't unlocking.</b> Double-check the license key was copied in full with no extra spaces, and that you have an internet connection — verification checks against Gumroad in real time.</li>
+      <li><b>Something looks stuck or stale.</b> Settings → Privacy &amp; Data → "Delete all local data" fully resets the extension to a clean state.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Privacy</h2>
+    <p>WriteFlow stores your settings only on your own device and sends text only to the AI provider you've configured, using your own key. Full details: <a class="text-link" href="https://claude.ai/artifact/2JY9bqor1sQKpoaJBhTwbn" target="_blank" rel="noopener">Privacy Policy →</a></p>
+  </div>
+
+  <div class="card contact-card">
+    <h2><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>Still stuck?</h2>
+    <p>Email directly and I'll get back to you — this isn't a ticket queue, it's a real inbox.</p>
+    <a class="btn" href="mailto:helloanishupreti@gmail.com">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+      helloanishupreti@gmail.com
+    </a>
+  </div>
+
+  <footer>WriteFlow AI · A Chrome extension for AI-assisted writing</footer>
+</body>
+</html>
