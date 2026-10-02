@@ -93,7 +93,7 @@ h2 { font-size: clamp(26px, 3.4vw, 34px); font-weight: 800; letter-spacing: -0.0
 .section-sub { color: var(--muted); font-size: 15.5px; margin: 0; }
 
 /* Three pillars */
-.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.pillars { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 @media (max-width: 860px) { .pillars { grid-template-columns: 1fr; } }
 .pillar { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; gap: 10px; }
 section.alt .pillar { background: var(--bg); }

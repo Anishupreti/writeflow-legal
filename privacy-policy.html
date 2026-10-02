@@ -19,7 +19,7 @@
 
 <main class="doc" id="main">
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: September 27, 2026 · applies to WriteFlow AI version 0.49.1 for Chrome and Microsoft Edge</p>
+  <p class="meta">Last updated: October 2, 2026 · applies to WriteFlow AI version 1.0.0 for Chrome, Microsoft Edge and Firefox</p>
 
   <div class="summary-card">
     <p><b>The short version</b></p>
@@ -49,19 +49,28 @@
   </nav>
 
   <h2 id="what">1. What WriteFlow does</h2>
-  <p>WriteFlow AI is a browser extension with three parts:</p>
+  <p>WriteFlow AI is a browser extension for Chrome, Microsoft Edge and Firefox. Each of its seven features can be turned off:</p>
   <ul>
     <li><b>Writing help</b> in text boxes on the web. It rewrites, drafts and replies to posts, comments, emails and chats.</li>
     <li><b>A prompt helper</b> in ChatGPT, Claude and Gemini. It checks prompts, improves them with ✨ Improve, runs simple tasks on your device and gives model advice.</li>
+    <li><b>AI Sessions</b>, a list of your ChatGPT, Claude and Gemini chats and the answers you keep.</li>
+    <li><b>Compare AIs</b>, which asks two to four AI models the same question.</li>
+    <li><b>Job Assist</b>, which helps you fill job applications and write answers, cover letters and apply guides from your own CV, and the <b>Job Tracker</b>, which keeps track of the jobs you save and apply to.</li>
     <li><b>The Review Workspace</b>, a page inside the extension for saving, comparing and deciding on answers.</li>
   </ul>
-  <p>It uses an AI provider you choose (OpenAI, Anthropic, Google Gemini, Groq or OpenRouter) with your own API key. A built-in <b>Mock</b> provider lets you try everything without a key, and it sends nothing anywhere.</p>
+  <p>It uses an AI provider you choose (OpenAI, Anthropic, Google Gemini, Groq or OpenRouter) with your own API key. A built-in <b>Demo mode</b> lets you try everything without a key, and it sends nothing anywhere.</p>
 
   <h2 id="read">2. What it reads, and when</h2>
   <ul>
-    <li><b>The text box you open WriteFlow on.</b> WriteFlow reads it when you click the W button or use a shortcut. It never reads password, payment or other sensitive fields.</li>
+    <li><b>The text box you open WriteFlow on.</b> WriteFlow reads it when you click the WriteFlow button or use a shortcut. The button never appears in, and WriteFlow never reads, password, PIN, one-time-code, payment or other sensitive fields, sign-in forms or search boxes.</li>
     <li><b>What you're replying to.</b> For replies, it reads the post, comment, email thread or chat messages linked to that box. If a social site's layout hides the post, it reads the visible words next to the reply box instead (at most 1,500 characters). It never reads past a pop-up, and never from a feed that shows several posts. It then shows you what it read as <i>Replying to (read from the page)</i>, and you can edit it before anything is sent.</li>
     <li><b>Your draft prompt in ChatGPT, Claude and Gemini.</b> WriteFlow checks it <i>on your device</i> while you type, to offer suggestions and estimate size. It also estimates how long the visible conversation is, on your device. Nothing leaves your device unless you click an action that uses your AI provider, such as ✨ Improve or Continue in a new chat.</li>
+    <li><b>Which chat is open on ChatGPT, Claude and Gemini.</b> For your AI Sessions list, WriteFlow reads the conversation's link and page title (and, only if there is no title, the start of your first question). It keeps them on your device and never sends them anywhere. In long chats, the optional Outline reads your questions on the page to list them, and stores nothing. When you return to a chat after 6 hours or more, the optional “Where I left off” card reads your last question and the last answer on the page, and stores nothing.</li>
+    <li><b>Answers you choose to keep.</b> When you choose <i>Keep answer</i> (or press Alt+Shift+K), WriteFlow saves that answer’s text with its chat’s link and title on your device. Nothing is kept unless you choose it.</li>
+    <li><b>Continuing in another AI.</b> If you choose <i>Continue in ChatGPT, Claude or Gemini</i>, WriteFlow places a brief built from the chat into the new chat’s message box. It is never sent for you; nothing reaches that AI until you send it yourself.</li>
+    <li><b>Job pages and application forms (Job Assist).</b> On a job ad, WriteFlow reads the job title, company, location and description from the page. On an application form, it reads the field labels to work out what each field asks. Your profile is never given to the page: only the values for the fields you choose to fill go back into the form. WriteFlow never reads or fills passwords, payment details, government IDs, date of birth, equal-opportunity or background questions, signatures or consent boxes, and it never submits a form.</li>
+    <li><b>Whether you sent an application (Job Tracker).</b> When you press an application form's own submit button, WriteFlow reads the page's text for a thank-you message for up to 25 seconds, on your device only, so it can ask "Applied?". Nothing is sent.</li>
+    <li><b>A CV file you add</b> on the Job Assist page (PDF, Word, ODT, RTF or text). It is read on your device to build your profile; the file itself is never uploaded.</li>
     <li><b>Text you select and save</b> with the right-click <i>Save selection to Review</i> item. WriteFlow also saves the page's title and web address, without query strings or fragments.</li>
   </ul>
   <p>WriteFlow does not read your browsing history, and does nothing on a site until you use it there.</p>
@@ -74,13 +83,22 @@
       <tbody>
         <tr><td>AI provider API key(s)</td><td>To call the provider you chose</td><td><span class="tag local">This device</span> Never added to web pages</td></tr>
         <tr><td>Settings, enabled models, disabled sites</td><td>How and where WriteFlow works</td><td><span class="tag local">This device</span></td></tr>
+        <tr><td>Popup and Settings counts</td><td>How often each popup button and Settings section is used, so we can tell what helps (numbers only)</td><td><span class="tag local">This device</span> Never sent</td></tr>
+        <tr><td>Feature switches and walkthrough progress</td><td>Which of the seven features are on, and how far you got in the first-run tour (a step number, finished or skipped, and dates)</td><td><span class="tag local">This device</span></td></tr>
         <tr><td>Writing samples, style notes, Style DNA</td><td>Optional: drafts that sound like you</td><td><span class="tag local">This device</span></td></tr>
         <tr><td>Saved context and preferences</td><td>Only what you choose to save, added to a message only when you choose to</td><td><span class="tag local">This device</span></td></tr>
+        <tr><td>Kept answers</td><td>The text of AI answers you chose to keep, the chat each came from (link and title), when you kept it, and your notes</td><td><span class="tag local">This device</span> Only answers you choose</td></tr>
+        <tr><td>AI Sessions list</td><td>Your ChatGPT, Claude and Gemini chats, so you can find and reopen them: each chat's link (no query string), title and when you opened it, plus your own notes, tags, pins, folders and saved sessions, and which listed chats you closed recently (up to 50). If a site shows no title, the first 80 characters of your first question</td><td><span class="tag local">This device</span> Never the conversation itself</td></tr>
+        <tr><td>Job Assist profile</td><td>To fill job applications and ground letters and answers in your real experience: contact details, roles, achievements, education, skills, your notes, and application details you add (such as notice period)</td><td><span class="tag local">This device</span> Never synced</td></tr>
+        <tr><td>CV file</td><td>Attached to an application's upload field only when you choose Fill</td><td><span class="tag local">This device</span> IndexedDB, never synced</td></tr>
+        <tr><td>Saved jobs</td><td>Up to 20 jobs you save: title, company, location, description, link, and the latest cover letter and apply guide written for each</td><td><span class="tag local">This device</span></td></tr>
+        <tr><td>Job Tracker</td><td>The jobs you save, fill or apply to: title, company, location, link, the saved ad, stage and dates, interviews, a contact you type, salary, notes, what you sent, and a timeline</td><td><span class="tag local">This device</span> IndexedDB, never synced</td></tr>
+        <tr><td>Job Assist monthly counts</td><td>How many answers, letters and guides were drafted this month (numbers only), for the Free allowance</td><td><span class="tag local">This device</span></td></tr>
         <tr><td>Review Workspace items, sources, decisions</td><td>What you save or create in the Workspace</td><td><span class="tag local">This device</span> IndexedDB</td></tr>
         <tr><td>Usage log</td><td>Local counts and estimates (for example "prompt checked" or "about 300 tokens avoided"), <b>never text</b></td><td><span class="tag local">This device</span></td></tr>
         <tr><td>Feedback (thumbs up/down)</td><td>Local only, capped at 100 entries</td><td><span class="tag local">This device</span></td></tr>
-        <tr><td>Free-Improve counter</td><td>How many of your 100 free Improves are used: numbers and dates only, never text</td><td><span class="tag local">This device</span> and your browser's sync storage, so reinstalling doesn't reset it</td></tr>
-        <tr><td>Pro licence key and status</td><td>To unlock Pro</td><td><span class="tag local">This device</span> Checked with Gumroad</td></tr>
+        <tr><td>Free-Improve counter</td><td>How many free Improves are used (100 to start, then 20 a month): numbers and dates only, never text</td><td><span class="tag local">This device</span> and your browser's sync storage, so reinstalling doesn't reset it</td></tr>
+        <tr><td>Pro licence key and status (trial, active, cancelled, payment failed, ended) and when it was last checked</td><td>To unlock Pro and remind you before a trial ends</td><td><span class="tag local">This device</span> Checked with Gumroad</td></tr>
       </tbody>
     </table>
   </div>
@@ -96,10 +114,22 @@
     <li>the instruction for the action you chose.</li>
   </ul>
   <p>Endpoints: <code>api.openai.com</code>, <code>api.anthropic.com</code>, <code>generativelanguage.googleapis.com</code>, <code>api.groq.com</code>, <code>openrouter.ai</code>. WriteFlow doesn't route, log or see this traffic. Your provider's own privacy policy and terms apply to what it receives.</p>
-  <h3>Gumroad, only for a Pro licence</h3>
-  <p>If you enter a Pro licence key, WriteFlow sends it to Gumroad (<code>api.gumroad.com</code>) to verify it, then re-checks it at most once a week. A re-check doesn't count as a licence use. If a check fails because you're offline, you keep Pro.</p>
+  <h3>Job Assist: your AI provider, only when you choose</h3>
+  <p>Job Assist calls your AI provider, with your key, only when you choose one of these. Filling in your details and attaching your CV make no AI call and send nothing.</p>
+  <ul>
+    <li><i>Build my profile</i>: your CV text, with your name, email, phone and links replaced by placeholders on your device.</li>
+    <li><i>Read this job</i> or <i>Read this page with AI</i>, on a page with no job data WriteFlow can read itself: the page's visible text, without menus, footers, cookie notices or anything typed into forms.</li>
+    <li><i>Draft answer</i>: the question, the job ad and your experience.</li>
+    <li><i>Job Tracker: Write with AI</i> (follow-up, thank-you note, interview prep): the job's key points, the applied or interview date, and your experience. Contacts and salary are never sent.</li>
+    <li><i>Write cover letter</i> and <i>Get apply guide</i>: the job's key points (what they need, what you would do, skills and similar, picked out of the ad on your device) and your experience. An ad with no clear sections is sent trimmed.</li>
+  </ul>
+  <p>Your contact details and name are never sent; a letter's sign-off is added on your device. Each panel says what will be sent before you choose.</p>
+  <h3>Compare AIs: each provider you pick</h3>
+  <p>On the Compare AIs page, your question goes to every provider and model you pick, and only those, each with the key you saved for it. The page lists them before you ask. Answers stay on the page unless you choose <i>Save to Workspace</i>, which keeps them in the local database on this device. With no key saved, demonstration answers are shown and nothing is sent.</p>
+  <h3>Gumroad, only for Pro</h3>
+  <p>Pro is sold through Gumroad as a membership with a 7-day free trial. Your payment details go only to Gumroad; WriteFlow never sees them. If you enter a Pro licence key, WriteFlow sends only that key to Gumroad (<code>api.gumroad.com</code>) to check it, then re-checks it at most once a day for a membership (once a week for the original one-time licence). The reply tells WriteFlow whether the trial or subscription is active, cancelled, ended or has a failed payment, and WriteFlow keeps that status on your device. When you activate a subscription key, WriteFlow asks Gumroad to count this browser once, because one subscription works in up to 2 browsers; a re-check never counts. If you're offline, you keep Pro for up to a week past the last check, then Pro pauses until the key can be checked again.</p>
   <h3>Your browser's sync service</h3>
-  <p>If browser sync is turned on, the free-Improve counter (numbers and dates only) syncs through your Google or Microsoft account like any extension's sync storage. Nothing else WriteFlow stores is synced.</p>
+  <p>If browser sync is turned on, the free-Improve counter (numbers and dates only), whether this profile has had a Pro trial, and a short one-way tag made from your Pro key (never the key itself, so the same profile isn't counted twice) sync through your Google or Microsoft account like any extension's sync storage. Nothing else WriteFlow stores is synced.</p>
   <p><b>That's the complete list.</b> WriteFlow sends nothing to any server run by WriteFlow, because none exists.</p>
 
   <h2 id="never">5. What WriteFlow never does</h2>
@@ -118,23 +148,29 @@
     <li><b>Access to supported sites</b> (email, social and chat sites, and ChatGPT, Claude and Gemini): to show the WriteFlow button beside text boxes there. Any other site is added only if you turn it on from the popup, one site at a time.</li>
     <li><b>Access to your AI provider's API and to Gumroad</b>: to send the requests you ask for and to verify a Pro licence.</li>
     <li><b><code>storage</code></b>: to keep your settings on your device, and the free-Improve counter in sync storage.</li>
-    <li><b><code>scripting</code></b>: used only when you click <i>Enable WriteFlow here</i>, to add WriteFlow to that one site.</li>
-    <li><b><code>contextMenus</code></b>: adds <i>Save selection to Review</i> to the right-click menu.</li>
+    <li><b><code>activeTab</code></b>: when you press <i>Read this job</i> in the popup or the right-click menu, WriteFlow gets access to that one tab, only then, to open Job Assist there.</li>
+    <li><b><code>scripting</code></b>: used only when you click <i>Enable WriteFlow here</i> (to add WriteFlow to that one site) or <i>Read this job</i> (to open Job Assist in that tab).</li>
+    <li><b><code>contextMenus</code></b>: adds <i>Save selection to Review</i> and <i>Read this job with Job Assist</i> to the right-click menu.</li>
+    <li><b>Firefox data-collection notice</b>: Firefox shows at install that WriteFlow handles website content, personal communications, authentication information (your own API and licence keys) and personal information (your Job Assist profile), as described on this page.</li>
   </ul>
 
   <h2 id="controls">7. Your controls</h2>
   <ul>
-    <li><b>Turn WriteFlow off on a site:</b> in the popup, or in Settings → Disabled Sites.</li>
-    <li><b>Delete all local data:</b> Settings → Privacy &amp; Data → <i>Delete all local data</i> clears your key, settings, samples, feedback, licence and disabled sites.</li>
+    <li><b>Turn WriteFlow off on a site:</b> in the popup, or in Settings → Features → <i>Sites where WriteFlow is off</i>.</li>
+    <li><b>Delete all local data:</b> Settings → Privacy and data → <i>Delete all local data</i> clears your key, settings, samples, feedback, licence, disabled sites, Job Assist profile and CV, Job Tracker, AI Sessions and Review Workspace.</li>
     <li><b>Clear the usage log:</b> Settings → <i>Clear local log</i>.</li>
     <li><b>Edit or remove saved context:</b> in Settings.</li>
+    <li><b>AI Sessions:</b> pause listing, turn it off per site, turn off the Outline, the “Where I left off” card or Keep answer, delete kept answers one by one, export the list, or delete it all on the AI Sessions page. Temporary chats are never listed.</li>
+    <li><b>Feature switches:</b> turn any of the seven features off in the popup or at the top of Settings. A feature that's off shows nothing on websites, records nothing and makes no AI calls; its data is kept until you delete it.</li>
+    <li><b>Job Assist:</b> edit or delete your profile and CV file on the Job Assist page (popup → Job Assist), and hide Job Assist on job pages with the switch there.</li>
+    <li><b>Job Tracker:</b> delete any job from its details, or export all jobs to a CSV file on your computer.</li>
     <li><b>Review Workspace:</b> its data stays in the extension's local database until you uninstall. Use <i>Export</i> first if you want a copy.</li>
     <li><b>Free-Improve counter:</b> stays in sync storage so the free allowance can't be reset by reinstalling. It holds no text. Clearing your browser's synced data removes it.</li>
     <li><b>Uninstall:</b> removes WriteFlow's local data from this browser.</li>
   </ul>
 
-  <h2 id="store-policy">8. Chrome Web Store and Microsoft Edge Add-ons policies</h2>
-  <p>WriteFlow's use of information follows the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq" target="_blank" rel="noopener">Chrome Web Store User Data Policy</a>, including the Limited Use requirements, and the Microsoft Edge Add-ons policies. Data is used only to provide the features you use. It is sent only to the AI provider you choose, and a licence key only to Gumroad. It is never sold or transferred for any other purpose.</p>
+  <h2 id="store-policy">8. Chrome Web Store, Microsoft Edge Add-ons and Firefox Add-ons policies</h2>
+  <p>WriteFlow's use of information follows the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq" target="_blank" rel="noopener">Chrome Web Store User Data Policy</a>, including the Limited Use requirements, the Microsoft Edge Add-ons policies, and the <a href="https://extensionworkshop.com/documentation/publish/add-on-policies/" target="_blank" rel="noopener">Firefox Add-on Policies</a>. Data is used only to provide the features you use. It is sent only to the AI provider you choose, and a licence key only to Gumroad. It is never sold or transferred for any other purpose.</p>
 
   <h2 id="children">9. Children</h2>
   <p>WriteFlow is not directed at children and does not knowingly collect data from children.</p>
@@ -147,7 +183,7 @@
 <footer class="site-foot">
   <div class="wrap">
     <div class="foot-links"><a href="index.html">Home</a><a href="support.html">Support</a><a href="https://anishup.gumroad.com/l/writeflow-ai" target="_blank" rel="noopener">Get Pro</a><a href="mailto:helloanishupreti@gmail.com">Contact</a></div>
-    <div class="copyright">WriteFlow AI · A browser extension for Chrome and Edge</div>
+    <div class="copyright">WriteFlow AI · A browser extension for Chrome, Edge and Firefox</div>
   </div>
 </footer>
 </body>
